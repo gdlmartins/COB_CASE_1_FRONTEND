@@ -5,13 +5,12 @@ import { GlobalStyle } from "./styled-app";
 function App() {
   return (
     <>
-     <GlobalStyle/>
+      <GlobalStyle />
       <BrowserRouter>
         <Router />
       </BrowserRouter>
-      </>
-  )
-    
+    </>
+  );
 }
 
 export default App;

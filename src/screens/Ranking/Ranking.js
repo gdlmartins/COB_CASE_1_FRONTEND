@@ -31,10 +31,9 @@ const Competitions = () => {
  
     <div>
       <Header
-        namePage1={"Competitors"}
-        namePage2={"Competitions"}
-        namePage3={"Ranking"}
-        buttonName={"goback"}
+    Competitors={"Competitors"}
+    Competitions={"Competitions"}
+    Status={"Status"}
       />
       <Box>
         <h1>Ranking</h1>

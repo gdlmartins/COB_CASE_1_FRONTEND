@@ -8,31 +8,20 @@ import { postApi } from "../../services/postApi";
 
 
 const Competitions =() =>{ 
- 
     const {form, onChange , clear} = useForm({
         competitionName:"",
         status:"",
      })
     const onSubmit = (e)=> {
         e.preventDefault();
-       
         const teste =  postApi("competition" , form )
-        console.log(form)
-        console.log("Clicado")
-        
     } 
-    console.log(form)
-
-  
-
-  
     return(
       <div>
         <Header 
-        namePage1={"Competitors"}
-        namePage2={"Competitions"}
-        namePage3={"Ranking"}
-        buttonName={"goback"}
+          Competitors={"Competitors"}
+          Status={"Status"}
+          Ranking={"Ranking"}
         />
         <Box>
         <h1>Start a Competition</h1>

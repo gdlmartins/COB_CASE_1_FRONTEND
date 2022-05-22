@@ -26,10 +26,9 @@ const Competitions =()=>{
     return(
       <div>
         <Header 
-         namePage1={"Competition Page"}
-        //  namePage2={"Competitors Page"}
-         namePage3={"Ranking"}
-        //  buttonName={"goback"}
+          Competitions={"Competitions"}
+          Status={"Status"}
+          Ranking={"Ranking"}
         />
         <Box>
         <h1>Competitors Scores</h1>
