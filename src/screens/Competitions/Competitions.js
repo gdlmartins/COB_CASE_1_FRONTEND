@@ -4,39 +4,48 @@ import useForm from "../../hooks/useForm"
 import { Button, TextField } from '@mui/material';
 import { MainBox, Box } from "./styledCompetitions";
 import Header from "../../components/headers/Header";
+import { postApi } from "../../services/postApi";
 
 
-const Competitions =()=>{ 
+const Competitions =() =>{ 
  
     const {form, onChange , clear} = useForm({
-        name:"",
+        competitionName:"",
         status:"",
      })
     const onSubmit = (e)=> {
         e.preventDefault();
+       
+        const teste =  postApi("competition" , form )
         console.log(form)
         console.log("Clicado")
-
+        
     } 
     console.log(form)
+
+  
+
   
     return(
       <div>
         <Header 
-        namePage1={"Competitors Page"}
-        namePage2={"Competitors Page"}
+        namePage1={"Competitors"}
+        namePage2={"Competitions"}
+        namePage3={"Ranking"}
         buttonName={"goback"}
         />
         <Box>
-        <h1>Competitions Page</h1>
+        <h1>Start a Competition</h1>
+        <span>100m and darts have to be part of the name.</span>
       <MainBox>
 
   
         <form onSubmit={onSubmit}>
         <TextField
-          name={"competition"}
-          value={form.competition}
+          name={"competitionName"}
+          value={form.competitionName}
           onChange={onChange}
+          placeholder="darts... or 100m... ex: 100m  semi-finals"
           label={"Competition name"} 
           required
           fullWidth
@@ -45,8 +54,8 @@ const Competitions =()=>{
 
         <TextField
           name={"status"}
-          value={form.name}
-          onChange={onChange}
+          value={"open"}
+          // onChange={onChange}
           label="Status"
           required
           fullWidth

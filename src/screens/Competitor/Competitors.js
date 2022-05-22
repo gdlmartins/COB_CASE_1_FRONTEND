@@ -4,6 +4,7 @@ import useForm from "../../hooks/useForm"
 import { Button, TextField } from '@mui/material';
 import { MainBox, Box } from "./styledCompetitor";
 import Header from "../../components/headers/Header";
+import { postApi } from "../../services/postApi";
 
 
 const Competitions =()=>{ 
@@ -17,6 +18,7 @@ const Competitions =()=>{
         e.preventDefault();
         console.log(form)
         console.log("Clicado")
+        postApi("competitor", form)
 
     } 
     console.log(form)
@@ -24,12 +26,13 @@ const Competitions =()=>{
     return(
       <div>
         <Header 
-         namePage1={"Competitors Page"}
-         namePage2={"Competitors Page"}
-         buttonName={"goback"}
+         namePage1={"Competition Page"}
+        //  namePage2={"Competitors Page"}
+         namePage3={"Ranking"}
+        //  buttonName={"goback"}
         />
         <Box>
-        <h1>Competitors Page</h1>
+        <h1>Competitors Scores</h1>
       <MainBox>
 
   
@@ -38,6 +41,7 @@ const Competitions =()=>{
           name={"competition"}
           value={form.competition}
           onChange={onChange}
+
           label={"Competition"} 
           required
           fullWidth

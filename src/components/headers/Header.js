@@ -3,7 +3,7 @@ import React from "react"
 import {BoxStyled} from "./styledHeader"
 
 
-const Header = ({namePage1,namePage2 , buttonName})=> {
+const Header = ({namePage1,namePage2, namePage3 , buttonName})=> {
 
 
     return ( 
@@ -19,6 +19,11 @@ const Header = ({namePage1,namePage2 , buttonName})=> {
             sx={{color:"white" , background:"red"}}
             > 
                     <h2>{namePage2}</h2>
+            </Button>
+            <Button
+            sx={{color:"white" , background:"red"}}
+            > 
+                    <h2>{namePage3}</h2>
             </Button>
             <Button
             sx={{color:"white" , background:"red"}}
