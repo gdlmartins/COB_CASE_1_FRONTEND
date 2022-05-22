@@ -1,6 +1,6 @@
 import { Route, Routes  } from "react-router";
-import Competition from "../screens/Competitions";
-import Competitors from "../screens/Competitors";
+import Competition from "../screens/Competitions/Competitions";
+import Competitors from "../screens/Competitor/Competitors";
 import  Error from "../screens/Error";
 
 
